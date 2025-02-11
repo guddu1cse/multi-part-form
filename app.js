@@ -63,3 +63,9 @@ function renderStep(){
     }
 }
 
+function prev(){
+    idx--;
+    if(idx<1) idx = 1;
+    render(idx);
+}
+
