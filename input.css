@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Primary Colors */
+  --marine-blue: #02295a;
+  --purplish-blue: #473dff;
+  --pastel-blue: #adbeff;
+  --light-blue: #bfe2fd;
+  --strawberry-red: #ed3548;
+
+  /* Neutral Colors */
+  --cool-gray: #9699ab;
+  --light-gray: #d6d9e6;
+  --magnolia: #f0f6ff;
+  --alabaster: #fafbff;
+  --white: #ffffff;
+
+  /* Typography */
+  --font-family: 'Ubuntu', sans-serif;
+  --font-size: 16px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+/* Apply default styles */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--cool-gray);
+  background: var(--light-blue);
+  font-weight: var(--font-weight-regular);
+}
