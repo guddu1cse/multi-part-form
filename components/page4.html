@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 4</title>
     <script src="./js/app4.js" defer></script>
 </head>
+
 <body>
-    <div class="w-20 h-24 bg-green-500 text-colors-blue-900 flex justify-center items-center rounded-lg shadow-lg">
-        page 4
+    <div class="p-5 relative bottom-22 left-2 sm:bottom-0 sm:left-0 flex flex-col justify-center bg-white rounded-lg">
+        <div class="">
+            <h1 class="font-bold text-2xl text-[var(--marine-blue)]">Finishing up</h1>
+            <div class="mt-3">
+                <p class="text-[12px] text-[var(--cool-gray)]">Double-check everything looks OK before confirming.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-5 mt-10 bg-[#d4e2f5] rounded-lg p-2 w-full">
+            <div class="flex justify-between w-full items-center">
+                <div class="flex flex-col items-start">
+                    <p id="subscribtion-name" class="text-[15px] text-[var(--marine-blue)] font-semibold">Arcade
+                        <span id="subscribtion-type">(Yearly)</span>
+                    </p>
+                    <button class="border-b p-0 text-[12px] text-[var(--cool-gray)]">Change</button>
+                </div>
+                <div>
+                    <p id="arcade-price" class="font-semibold text-[13px] text-[var(--marine-blue)]">$19.99/mo</p>
+                </div>
+            </div>
+            <div class="h-[1px] bg-[var(--cool-gray)] w-full mt-2"></div>
+            <div id="subcriptions" class="w-full flex flex-col justify-center items-center">
+                <div id="items" class="w-full flex justify-between items-center mt-2">
+                    <p class="text-[12px] text-[var(--cool-gray)]">Online Service</p>
+                    <p class="text-[12px] text-[var(--marine-blue)]">+$10/yr</p>
+                </div>
+
+                <div id="items" class="w-full flex justify-between items-center mt-2">
+                    <p class="text-[12px] text-[var(--cool-gray)]">Larger Storage</p>
+                    <p class="text-[12px] text-[var(--marine-blue)]">+$10/yr</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <button onclick="clickMe()">Click Me</button>
 </body>
+
 </html>
