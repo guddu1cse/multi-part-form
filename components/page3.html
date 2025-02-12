@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/app3.js" defer></script>
     <title>Page 3</title>
 </head>
+
 <body>
-    <div class="w-20 h-24 bg-green-500 text-colors-blue-900 flex justify-center items-center rounded-lg shadow-lg">
-        page3
+    <div class="p-5 relative bottom-22 left-2 sm:bottom-0 sm:left-0 flex flex-col justify-center bg-white rounded-lg">
+        <div class="">
+            <h1 class="font-bold text-2xl text-[var(--marine-blue)]">Pick add-ons</h1>
+            <div>
+                <p class="text-[12px] text-[var(--cool-gray)]">Add-ons help enhance your gaming experience.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-5 mt-10">
+            <div class="flex flex-row justify-center items-center gap-5 w-full h-[70px] border rounded-lg p-2">
+                <input type="checkbox" class="h-[20px] w-[20px]">
+                <div class="flex flex-col flex-1 mt-2">
+                    <p class="text-[15px] text-[var(--marine-blue)] font-semibold">Online service</p>
+                    <p class="text-[13px] text-[var(--cool-gray)]">access to multiplayer games</p>
+                </div>
+                <div>
+                    <p id="online-price" class="text-[var(--purplish-blue)] text-[13px]">$1/mo</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row justify-center items-center gap-5 w-full h-[70px] border rounded-lg p-2">
+                <input type="checkbox" class="h-[20px] w-[20px]">
+                <div class="flex flex-col flex-1 mt-2">
+                    <p class="text-[15px] text-[var(--marine-blue)] font-semibold">Larger storage</p>
+                    <p class="text-[13px] text-[var(--cool-gray)]">Extra 1TB of cloud save</p>
+                </div>
+                <div>
+                    <p id="online-price" class="text-[var(--purplish-blue)] text-[13px]">$2/mo</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row justify-center items-center gap-5 w-full h-[70px] border rounded-lg p-2">
+                <input type="checkbox" class="h-[20px] w-[20px]">
+                <div class="flex flex-col flex-1 mt-2">
+                    <p class="text-[15px] text-[var(--marine-blue)] font-semibold">Customizable Profile</p>
+                    <p class="text-[13px] text-[var(--cool-gray)]">Custom theme on your profile</p>
+                </div>
+                <div>
+                    <p id="online-price" class="text-[var(--purplish-blue)] text-[13px]">$2/mo</p>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <button onclick="clickMe()">Click Me</button>
 </body>
+
 </html>

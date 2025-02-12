@@ -9,42 +9,32 @@
     <script src="./app.js" defer></script>
 </head>
 
-
-<!-- colors: {
-    marine: "var(--marine-blue)",
-    purplish: "var(--purplish-blue)",
-    pastel: "var(--pastel-blue)",
-    lightblue: "var(--light-blue)",
-    strawberry: "var(--strawberry-red)",
-    graycool: "var(--cool-gray)",
-    graylight: "var(--light-gray)",
-    magnolia: "var(--magnolia)",
-    alabaster: "var(--alabaster)",
-  }, -->
-
 <body>
-    <div id="main" class="h-screen w-screen bg-[#f3f4f6] flex-col sm:flex justify-center sm:items-center">
-        <div class="w-screen sm:w-4/5 md:w-6/8 lg:w-7/10 p-[10px] ms:p-[20px] justify-between bg-white p-4 flex rounded-lg shadow-lg">
-            <div id="progress" class="w-[30%] aspect-[137/284] bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover p-10">
-
+    <div id="main" class="h-screen w-screen bg-[var(--light-blue)] flex-col sm:flex justify-center sm:items-center">
+        <div
+            class="w-screen flex flex-col shadow-none sm:shadow-lg sm:flex-row lg:w-7/10 sm:p-3 justify-between bg-white rounded-lg">
+            <div id="progress"
+                class="w-screen h-[200px] flex flex-row justify-center gap-x-5 sm:gap-x-0 sm:justify-start sm:flex-col bg-[url('/assets/images/bg-sidebar-mobile.svg')] sm:bg-[url('/assets/images/bg-sidebar-desktop.svg')] bg-no-repeat bg-cover p-4 sm:w-[274px] sm:h-[568px] sm:p-10">
                 <!-- step-1 -->
-                <div class="flex gap-4 items-center justify-start mt-5 mb-5">
-                    <div id="step-1" class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
+                <div class="flex gap-4 items-start sm:items-center justify-start mt-5 mb-5">
+                    <div id="step-1"
+                        class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
                         <p>1</p>
                     </div>
-                    <div>
-                        <p class="text-[var(--cool-gray)] text-[11px] font-weight-300">STEP-1</p>
-                        <p class="text-white text-[13px] font-weight-400">YOUR INFO</p>
+                    <div class="hidden sm:block">
+                        <p class="text-[var(--cool-gray)] text-[11px] font-light">STEP-1</p>
+                        <p class="text-white text-[13px] font-normal">YOUR INFO</p>
                     </div>
                 </div>
                 <!-- step-1 end -->
 
                 <!-- step-2 -->
-                <div class="flex gap-4 items-center justify-start mt-5 mb-5">
-                    <div id="step-2" class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
+                <div class="flex gap-4 items-start sm:items-center justify-start mt-5 mb-5">
+                    <div id="step-2"
+                        class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
                         <p>2</p>
                     </div>
-                    <div>
+                    <div class="hidden sm:block">
                         <p class="text-[var(--cool-gray)] text-[11px] font-weight-300">STEP-2</p>
                         <p class="text-white text-[13px] font-weight-400">SELECT PLAN</p>
                     </div>
@@ -52,11 +42,12 @@
                 <!-- step-2 end -->
 
                 <!-- step-3 -->
-                <div class="flex gap-4 items-center justify-start mt-5 mb-5">
-                    <div id="step-3" class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
+                <div class="flex gap-4 items-start sm:items-center justify-start mt-5 mb-5">
+                    <div id="step-3"
+                        class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
                         <p>3</p>
                     </div>
-                    <div>
+                    <div class="hidden sm:block">
                         <p class="text-[var(--cool-gray)] text-[11px] font-weight-300">STEP-3</p>
                         <p class="text-white text-[13px] font-weight-400">SELECT ADD-ONS</p>
                     </div>
@@ -64,11 +55,12 @@
                 <!-- step-3 end -->
 
                 <!-- step-4 -->
-                <div class="flex gap-4 items-center justify-start mt-5 mb-5">
-                    <div id="step-4" class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
+                <div class="flex gap-4 items-start sm:items-center justify-start mt-5 mb-5">
+                    <div id="step-4"
+                        class="step text-white border border-white rounded-full h-8 w-8 flex justify-center items-center">
                         <p>4</p>
                     </div>
-                    <div>
+                    <div class="hidden sm:block">
                         <p class="text-[var(--cool-gray)] text-[11px] font-weight-300">STEP-4</p>
                         <p class="text-white text-[13px] font-weight-400">SUMMARY</p>
                     </div>
@@ -76,14 +68,19 @@
                 <!-- step-4 end -->
             </div>
 
-            <div class="w-[67%] flex flex-col">
-                <div id="content" class="h-[70vh] w-[100%] border border-black bg-white rounded-lg"></div>
-                <div class="flex justify-around mt-1">
+            <div class="flex flex-1 flex-col justify-between bg-[var(--light-blue)] sm:bg-white">
+                <div id="content" class="w-[96%]  flex items-center justify-center rounded-lg">
+                </div>
+
+                <div id="buttons"
+                    class="w-full flex bg-white absolute bottom-0 left-0 sm:relative justify-evenly items-center mt-1 gap-10 p-2">
                     <button id="prev" class="text-[var(--cool-gray)]" onclick="prev()">Go Back</button>
-                    <button id="next" class="bg-[var(--marine-blue)] text-white rounded-lg p-2 w-[100px]" onclick="next()">Next Step</button>
+                    <button id="next" class="bg-[var(--marine-blue)] text-white rounded-lg p-2 w-[100px]"
+                        onclick="next()">Next Step</button>
                 </div>
             </div>
-        </div>                      
+        </div>
     </div>
 </body>
+
 </html>
