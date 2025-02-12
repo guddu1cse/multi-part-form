@@ -37,12 +37,18 @@ function render(idx) {
 
 function removeScript() {
     scripts.forEach((script) => {
-        document.getElementById(script).remove();
-        console.log("removed", script);
+        let element = document.querySelector("#" + script);
+        if (element) {
+            element.remove();
+            console.log("Removed:", script);
+        } else {
+            console.warn("Element not found:", script);
+        }
     });
-
     scripts = [];
+    console.log("Remaining scripts:", scripts);
 }
+
 
 function clickParent() {
     console.log("clicked on parent");
