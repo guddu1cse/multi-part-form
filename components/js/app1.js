@@ -1,5 +1,5 @@
 console.log("app1")
 
-function clickMe(){
+function clickMe() {
     console.log("clicked on page 1");
 }

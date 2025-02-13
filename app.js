@@ -5,10 +5,11 @@ selectedPlan = {
     price: "9/mo",
     isMonthly: true
 }
-
 let addOns = [];
+let isValid = true;
 
 function next() {
+    if (!isValid) return;
     idx++;
     if (idx > 5) idx = 5;
     render(idx);
