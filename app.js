@@ -12,7 +12,40 @@ function next() {
     if (!isValid) return;
     idx++;
     if (idx > 5) idx = 5;
+    if (idx == 2) {
+        const form = document.getElementById("myForm");
+        if (!form.checkValidity()) {
+            idx = 1;
+            form.reportValidity();
+            showInvalid(form);
+            return;
+        }
+    }
     render(idx);
+}
+
+function showInvalid(form) {
+    const name = form.querySelector("input[name='name']");
+    const email = form.querySelector("input[name='email']");
+    const phone = form.querySelector("input[name='phone']");
+
+    if (name.value == "") {
+        name.classList.add("border-red-500");
+    } else {
+        name.classList.remove("border-red-500");
+    }
+
+    if (email.value == "") {
+        email.classList.add("border-red-500");
+    } else {
+        email.classList.remove("border-red-500");
+    }
+
+    if (phone.value == "" || (phone.value + "").length != 10) {
+        phone.classList.add("border-red-500");
+    } else {
+        phone.classList.remove("border-red-500");
+    }
 }
 
 //initial render
