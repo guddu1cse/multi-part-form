@@ -1,5 +1,12 @@
 let idx = 1;
 let scripts = [];
+let selectedPlan = {
+    plan: null,
+    price: null,
+    isMonthly: true
+}
+
+let addOns = [];
 
 function next() {
     idx++;
@@ -86,4 +93,6 @@ function renderBtn() {
         document.getElementById("buttons").classList.remove("hidden");
     }
 }
+
+
 

@@ -1,4 +1,9 @@
 console.log("app2")
+selectedPlan = {
+    plan: null,
+    price: null,
+    isMonthly: true
+}
 
 var isMonthly = false;
 handleToggl();
@@ -19,6 +24,11 @@ setTimeout(() => {
             const parent = this.parentElement;
             parent.classList.remove("border-[var(--cool-gray)]", "bg-transparent");
             parent.classList.add("border-[var(--marine-blue)]", "bg-[var(--light-blue)]");
+
+            selectedPlan.plan = parent.querySelectorAll("p")[0].innerText;
+            selectedPlan.price = parent.querySelectorAll("p")[1].innerText;
+            selectedPlan.isMonthly = !isMonthly;
+            console.log(selectedPlan);
         });
     });
 
