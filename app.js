@@ -49,11 +49,6 @@ function removeScript() {
     console.log("Remaining scripts:", scripts);
 }
 
-
-function clickParent() {
-    console.log("clicked on parent");
-}
-
 function renderStep() {
     console.log("render step");
     for (let i = 1; i <= 4; i++) {

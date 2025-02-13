@@ -3,6 +3,28 @@ console.log("app2")
 var isMonthly = false;
 handleToggl();
 
+setTimeout(() => {
+
+    document.querySelectorAll('.plan input[type="radio"]').forEach((radio) => {
+        radio.addEventListener('change', function () {
+            console.log("Event triggered");
+
+
+            document.querySelectorAll('.plan').forEach((plan) => {
+                plan.classList.remove("border-[var(--marine-blue)]", "bg-[var(--light-blue)]");
+                plan.classList.add("border-[var(--cool-gray)]", "bg-transparent");
+            });
+
+
+            const parent = this.parentElement;
+            parent.classList.remove("border-[var(--cool-gray)]", "bg-transparent");
+            parent.classList.add("border-[var(--marine-blue)]", "bg-[var(--light-blue)]");
+        });
+    });
+
+}, 500);
+
+
 function handleToggl() {
     console.log("toggled", isMonthly);
 
@@ -54,7 +76,17 @@ function handleToggl() {
 
 
 function renderPrice() {
-    document.getElementById("arcade-price").innerText = (isMonthly ? 9 : 90) + "/" + (isMonthly ? "mo" : "yr");
-    document.getElementById("advanced-price").innerText = (isMonthly ? 12 : 120) + "/" + (isMonthly ? "mo" : "yr");
-    document.getElementById("pro-price").innerText = (isMonthly ? 15 : 150) + "/" + (isMonthly ? "mo" : "yr");
+    const arcadePrice = document.getElementById("arcade-price");
+    const advancedPrice = document.getElementById("advanced-price");
+    const proPrice = document.getElementById("pro-price");
+
+    if (arcadePrice) {
+        arcadePrice.innerText = (isMonthly ? 9 : 90) + "/" + (isMonthly ? "mo" : "yr");
+    }
+    if (advancedPrice) {
+        advancedPrice.innerText = (isMonthly ? 12 : 120) + "/" + (isMonthly ? "mo" : "yr");
+    }
+    if (proPrice) {
+        proPrice.innerText = (isMonthly ? 15 : 150) + "/" + (isMonthly ? "mo" : "yr");
+    }
 }
