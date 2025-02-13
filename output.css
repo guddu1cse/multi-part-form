@@ -1168,6 +1168,9 @@
   .text-\[var\(--cool-gray\)\] {
     color: var(--cool-gray);
   }
+  .text-\[var\(--light-blue\)\] {
+    color: var(--light-blue);
+  }
   .text-\[var\(--marine-blue\)\] {
     color: var(--marine-blue);
   }

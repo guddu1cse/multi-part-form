@@ -5,8 +5,9 @@ console.log(addOns);
 
 
 setTimeout(() => {
-    updateSubscriptionUI();
-    renderAddOns();
+    updateSubscriptionUI(); //updating subscription UI
+    renderAddOns(); //rendering addOns iteam list
+    renderTotalPrice(); //calculeting total price accross the item which is selected
 }, 500);
 
 function updateSubscriptionUI() {
@@ -38,4 +39,15 @@ function renderAddOns() {
 
         subcriptionsElement.appendChild(div);
     });
+
+    document.getElementById("subscription-duration").innerText = selectedPlan.isMonthly ? "Total (per month)" : "Total (per year)";
+}
+
+function renderTotalPrice() {
+    let totalPrice = parseInt(selectedPlan.price.replace("$", "").replace("/mo", "").replace("/yr", ""));
+    addOns.forEach((addOn) => {
+        totalPrice += parseInt(addOn.price.replace("$", "").replace("/mo", "").replace("/yr", ""));
+    });
+
+    document.getElementById("total-price").innerText = "$" + totalPrice;
 }
