@@ -31,20 +31,56 @@ function showInvalid(form) {
 
     if (name.value == "") {
         name.classList.add("border-red-500");
+        const parent = name.closest("div");
+        parent.classList.add("text-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "* Name is required";
+        label.classList.add("text-red-500");
     } else {
+        const parent = name.closest("div");
+        parent.classList.remove("text-red-500");
         name.classList.remove("border-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "Name";
+        label.classList.remove("text-red-500");
     }
 
     if (email.value == "") {
+        const parent = email.closest("div");
+        parent.classList.add("text-red-500");
         email.classList.add("border-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "* Email is required";
+        label.classList.add("text-red-500");
     } else {
+        const parent = email.closest("div");
+        parent.classList.remove("text-red-500");
         email.classList.remove("border-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "Email";
+        label.classList.remove("text-red-500");
     }
 
     if (phone.value == "" || (phone.value + "").length != 10) {
         phone.classList.add("border-red-500");
+        const parent = phone.closest("div");
+        parent.classList.add("text-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "* Phone is required";
+        label.classList.add("text-red-500");
     } else {
+        const parent = phone.closest("div");
+        parent.classList.remove("text-red-500");
         phone.classList.remove("border-red-500");
+
+        const label = parent.querySelector("label");
+        label.innerText = "Phone";
+        label.classList.remove("text-red-500");
     }
 }
 
