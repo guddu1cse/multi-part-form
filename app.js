@@ -1,8 +1,8 @@
 let idx = 1;
 let scripts = [];
-let selectedPlan = {
-    plan: null,
-    price: null,
+selectedPlan = {
+    plan: "Arcade",
+    price: "9/mo",
     isMonthly: true
 }
 

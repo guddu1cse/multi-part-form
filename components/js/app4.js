@@ -17,9 +17,9 @@ function updateSubscriptionUI() {
 
     //if (!subscriptionName || !subscriptionType || !subscriptionPrice) return;
 
-    subscriptionName.innerText = selectedPlan.plan;
+    subscriptionName.innerText = selectedPlan.plan + (selectedPlan.isMonthly ? " (Monthly)" : " (Yearly)");
     subscriptionType.innerText = selectedPlan.isMonthly ? "(Monthly)" : "(Yearly)";
-    subscriptionPrice.innerText = selectedPlan.price;
+    subscriptionPrice.innerText = "$" + selectedPlan.price.replace("/mo", "").replace("/yr", "");
 }
 
 function renderAddOns() {

@@ -1,14 +1,9 @@
 console.log("app2")
-selectedPlan = {
-    plan: null,
-    price: null,
-    isMonthly: true
-}
 
 var isMonthly = false;
-handleToggl();
 
 setTimeout(() => {
+    handleToggl();
 
     document.querySelectorAll('.plan input[type="radio"]').forEach((radio) => {
         radio.addEventListener('change', function () {
@@ -25,6 +20,7 @@ setTimeout(() => {
             parent.classList.remove("border-[var(--cool-gray)]", "bg-transparent");
             parent.classList.add("border-[var(--marine-blue)]", "bg-[var(--light-blue)]");
 
+            //updating the price
             selectedPlan.plan = parent.querySelectorAll("p")[0].innerText;
             selectedPlan.price = parent.querySelectorAll("p")[1].innerText;
             selectedPlan.isMonthly = !isMonthly;
